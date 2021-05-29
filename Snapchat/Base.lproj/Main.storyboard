@@ -1,24 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Iniciar Sesion View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="iniciarSesionViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagen" translatesAutoresizingMaskIntoConstraints="NO" id="uXP-UN-tXF">
+                                <rect key="frame" x="132" y="74" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Iir-BV-Ijj"/>
+                                    <constraint firstAttribute="width" constant="150" id="yBx-AX-fvb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocq-by-8VP">
+                                <rect key="frame" x="173.5" y="249" width="67" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese su Usuario" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UEZ-rF-pfT">
+                                <rect key="frame" x="107" y="296" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="xrD-zx-Lc4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5QH-Gu-ND8">
+                                <rect key="frame" x="156.5" y="355" width="101" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yin-jw-vd4">
+                                <rect key="frame" x="107" y="402" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Bji-t4-lYf"/>
+                                </constraints>
+                                <string key="placeholder" base64-UTF8="YES">
+SW5ncmVzZSBzdSBDb250cmFzZcOxYQA
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpd-xN-C5i">
+                                <rect key="frame" x="107" y="466" width="200" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="0r7-MJ-U33"/>
+                                </constraints>
+                                <state key="normal" title="Iniciar Sesión">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="iniciarSesionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iiF-K5-0eX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uXP-UN-tXF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="1zf-qn-RSO"/>
+                            <constraint firstItem="UEZ-rF-pfT" firstAttribute="top" secondItem="ocq-by-8VP" secondAttribute="bottom" constant="25" id="4WH-nw-fQ4"/>
+                            <constraint firstItem="5QH-Gu-ND8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="59J-md-aL6"/>
+                            <constraint firstItem="5QH-Gu-ND8" firstAttribute="top" secondItem="UEZ-rF-pfT" secondAttribute="bottom" constant="25" id="7oC-GZ-APp"/>
+                            <constraint firstItem="mpd-xN-C5i" firstAttribute="top" secondItem="yin-jw-vd4" secondAttribute="bottom" constant="30" id="8sD-Kz-R5A"/>
+                            <constraint firstItem="ocq-by-8VP" firstAttribute="top" secondItem="uXP-UN-tXF" secondAttribute="bottom" constant="25" id="941-FO-u4A"/>
+                            <constraint firstItem="mpd-xN-C5i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J4H-ex-DRq"/>
+                            <constraint firstItem="uXP-UN-tXF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ldq-u7-TM5"/>
+                            <constraint firstItem="ocq-by-8VP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ssa-fp-qNr"/>
+                            <constraint firstItem="yin-jw-vd4" firstAttribute="top" secondItem="5QH-Gu-ND8" secondAttribute="bottom" constant="25" id="YrA-r5-dyY"/>
+                            <constraint firstItem="yin-jw-vd4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a6K-aK-tP3"/>
+                            <constraint firstItem="UEZ-rF-pfT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="auX-ut-k87"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="UEZ-rF-pfT" id="54R-Co-lUy"/>
+                        <outlet property="passwordTextField" destination="yin-jw-vd4" id="FjH-ZA-D2j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="846.37681159420299" y="64.285714285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="imagen" width="561" height="561"/>
+    </resources>
 </document>
